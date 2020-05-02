@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
+    "@mdx-js/loader": "^1.6.1",
+    "@next/mdx": "^9.3.6",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "next": "^9.3.6",
+    "prism-react-renderer": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-matter": "^0.3.4-alpha.1"
+    "styled-matter": "^0.3.4-alpha.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
