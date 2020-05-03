@@ -1,0 +1,40 @@
+# Extra CSS
+
+Use the `xcss` prop to style what you can't using standard style props alone. It extends Emotion's `css` prop, allowing it to [pick up values from your theme](#theming) while also supporting [aliases](#aliases).
+
+## Hover
+
+```jsx
+<Button
+  bg="transparent"
+  border="1px solid"
+  color="primary"
+  xcss={{
+    '&:hover': {
+      bg: 'primary',
+      color: 'white'
+    }
+  }}
+>
+  Get started
+</Button>
+```
+
+## Group-hover
+
+```jsx
+<Div
+  bg="white"
+  xcss={{
+    '&:hover': {
+      bg: 'primary',
+    },
+    '&:hover *': {
+      color: 'white'
+    }
+  }}
+>
+  <H5 color="dark">Card title</H5>
+  <A href="#" color="dark">Card link</A>
+</Div>
+```
