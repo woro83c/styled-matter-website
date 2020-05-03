@@ -65,6 +65,10 @@ export default class App extends NextApp {
                     text-decoration: underline;
                   }
                 }
+
+                pre {
+                  overflow: auto;
+                }
               `}
             />
             <Component {...pageProps} />
