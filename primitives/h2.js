@@ -1,4 +1,4 @@
 import { componentize } from 'styled-matter'
-import Heading from './heading'
+import Heading from './heading.placeholder'
 
-export default componentize(<Heading fontSize={5} mt={10} />)
+export default componentize(<Heading as="h2" fontSize={5} mt={10} />)
