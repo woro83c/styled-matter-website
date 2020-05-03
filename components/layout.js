@@ -19,7 +19,7 @@ function Layout({ children }) {
         <Div position="fixed" pr={8} width={200}>
           <H1 as="div" alignItems="center" display="flex">
             <Logo />
-            <After>\00a0</After>
+            <After opacity={0}>-</After>
           </H1>
           <UL fontSize={1} listUnstyled>
             <LI mb={4}>
