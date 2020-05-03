@@ -3,7 +3,7 @@ import UI from '../lib/ui'
 import { H1 } from '../primitives'
 import Logo from './logo'
 
-const { After, Div, Header, LI, Main, UL } = UI
+const { Div, Header, LI, Main, UL } = UI
 
 function Layout({ children }) {
   return (
@@ -17,9 +17,13 @@ function Layout({ children }) {
     >
       <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
         <Div position="fixed" pr={8} width={200}>
-          <H1 as="div" alignItems="center" display="flex">
+          <H1
+            as="div"
+            alignItems="center"
+            display="flex"
+            xcss={{ '&::after': { content: '\\00a0' } }}
+          >
             <Logo />
-            <After opacity={0}>-</After>
           </H1>
           <UL fontSize={1} listUnstyled>
             <LI mb={4}>

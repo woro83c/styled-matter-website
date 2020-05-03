@@ -40,18 +40,6 @@ export default class App extends NextApp {
                   -webkit-tap-highlight-color: transparent;
                 }
 
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6 {
-                  font-weight: 900;
-                  line-height: 1.25;
-                  margin-bottom: 1rem;
-                  margin-top: 0;
-                }
-
                 p {
                   margin-bottom: 1.5rem;
                   margin-top: 0;
