@@ -3,14 +3,16 @@ import { MDXProvider } from '@mdx-js/react'
 import { cache } from 'emotion'
 import { ThemeProvider } from 'emotion-theming'
 import NextApp from 'next/app'
-import { Layout } from '../components'
+import { CodeBlock, Layout } from '../components'
 import theme from '../lib/theme'
-import { H1, H2 } from '../primitives'
+import { Figure, H1, H2 } from '../primitives'
 import '../styles/normalize.css'
 
 const components = {
+  code: CodeBlock,
   h1: H1,
   h2: H2,
+  pre: Figure,
   wrapper: Layout,
 }
 
@@ -52,10 +54,6 @@ export default class App extends NextApp {
                   &:hover {
                     text-decoration: underline;
                   }
-                }
-
-                pre {
-                  overflow: auto;
                 }
               `}
             />
