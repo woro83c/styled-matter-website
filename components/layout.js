@@ -1,10 +1,14 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import menu from '../lib/menu'
 import UI from '../lib/ui'
 import Logo from './logo'
 
-const { Div, H1, Header, LI, Main, UL } = UI
+const { A, Div, H1, Header, LI, Main, UL } = UI
 
 function Layout({ children }) {
+  const { pathname } = useRouter()
+
   return (
     <Div
       display="grid"
@@ -15,7 +19,7 @@ function Layout({ children }) {
       px={8}
     >
       <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
-        <Div position="fixed" pr={8} width={200}>
+        <Div position="fixed" pr={8} width={200} trim>
           <H1
             as="div"
             alignItems="center"
@@ -24,43 +28,18 @@ function Layout({ children }) {
           >
             <Logo />
           </H1>
-          <UL fontSize={1} listUnstyled>
-            <LI mb={4}>
-              <Link href="/">
-                <a>About Styled Matter</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/getting-started">
-                <a>Getting started</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/responsive-styles">
-                <a>Responsive styles</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/extra-css">
-                <a>Extra CSS</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/pseudo-elements">
-                <a>Pseudo-elements</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/components">
-                <a>Components</a>
-              </Link>
-            </LI>
-            <LI mb={4}>
-              <Link href="/custom-ui">
-                <a>Custom UI</a>
-              </Link>
-            </LI>
-          </UL>
+
+          {!!menu.length && (
+            <UL fontSize={1} fontWeight={500} listUnstyled trim>
+              {menu.map(({ children, href }, index) => (
+                <LI key={index} mb={4}>
+                  <Link href={href} passHref>
+                    <A color={href === pathname ? 'primary' : 'black'}>{children}</A>
+                  </Link>
+                </LI>
+              ))}
+            </UL>
+          )}
         </Div>
       </Header>
       <Main minWidth={0} p={12} trim>

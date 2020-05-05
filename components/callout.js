@@ -7,8 +7,8 @@ export default componentize(
     color="yellow.700"
     px={5}
     py={3}
-    rounded="lg"
     xcss={{ a: { color: 'yellow.800', fontWeight: 700 } }}
+    rounded
     trim
   />
 )

@@ -1,5 +1,5 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/github'
+import theme from 'prism-react-renderer/themes/ultramin'
 import UI from '../lib/ui'
 
 const { Pre } = UI
@@ -9,8 +9,8 @@ function CodeBlock({ children, className }) {
 
   return (
     <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Pre className={className} style={style}>
+      {({ className, tokens, getLineProps, getTokenProps }) => (
+        <Pre bg="gray.30" className={className}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

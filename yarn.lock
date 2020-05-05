@@ -6168,10 +6168,10 @@ styled-jsx@3.2.5:
     stylis "3.5.4"
     stylis-rule-sheet "0.0.10"
 
-styled-matter@^0.3.4-alpha.2:
-  version "0.3.4-alpha.2"
-  resolved "https://registry.yarnpkg.com/styled-matter/-/styled-matter-0.3.4-alpha.2.tgz#0a83f0564cb19d955020377fa2b63098f6f58216"
-  integrity sha512-5cMgeAN280XCCTd/N27fFiu6CnDXPA32nBbW+NmnfX4u6JMTW+q5OCjqj7/lsRk9Yo9QJJtHpicFxhWq+mps4g==
+styled-matter@^0.3.4-alpha.3:
+  version "0.3.4-alpha.3"
+  resolved "https://registry.yarnpkg.com/styled-matter/-/styled-matter-0.3.4-alpha.3.tgz#56518ad24fa2894518c94f002d12612053bbd1d6"
+  integrity sha512-TQrQj4wdjWY33Nkp7/O5ewz8xjYXiy9sv7DmGBxLDRI+Xd2o+HjHbW4s/gFBA86MR+jFkWndEIfFLHsPDsrBbQ==
   dependencies:
     "@emotion/is-prop-valid" "^0.8.8"
 
