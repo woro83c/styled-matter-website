@@ -5,10 +5,8 @@ import { ThemeProvider } from 'emotion-theming'
 import NextApp from 'next/app'
 import { CodeBlock, Layout } from '../components'
 import theme from '../lib/theme'
-import UI from '../lib/ui'
+import { Code, Figure, H1, H2, P } from '../primitives'
 import '../styles/normalize.css'
-
-const { Code, Figure, H1, H2, P } = UI
 
 const components = {
   code: CodeBlock,
