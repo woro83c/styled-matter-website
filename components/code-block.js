@@ -10,16 +10,7 @@ function CodeBlock({ children, className }) {
   return (
     <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Pre
-          className={className}
-          fontFamily="mono"
-          fontSize={1}
-          fontSmoothing="auto"
-          m={0}
-          p={5}
-          rounded="lg"
-          style={style}
-        >
+        <Pre className={className} style={style}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

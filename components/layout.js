@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import UI from '../lib/ui'
-import { H1 } from '../primitives'
 import Logo from './logo'
 
-const { Div, Header, LI, Main, UL } = UI
+const { Div, H1, Header, LI, Main, UL } = UI
 
 function Layout({ children }) {
   return (
@@ -64,7 +63,7 @@ function Layout({ children }) {
           </UL>
         </Div>
       </Header>
-      <Main minWidth={0} p={12} xcss={{ '> :last-child': { mb: 0 } }}>
+      <Main minWidth={0} p={12} trim>
         {children}
       </Main>
     </Div>

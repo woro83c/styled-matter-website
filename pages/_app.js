@@ -5,13 +5,17 @@ import { ThemeProvider } from 'emotion-theming'
 import NextApp from 'next/app'
 import { CodeBlock, Layout } from '../components'
 import theme from '../lib/theme'
-import { Figure, H1, H2 } from '../primitives'
+import UI from '../lib/ui'
 import '../styles/normalize.css'
+
+const { Code, Figure, H1, H2, P } = UI
 
 const components = {
   code: CodeBlock,
   h1: H1,
   h2: H2,
+  inlineCode: Code,
+  p: P,
   pre: Figure,
   wrapper: Layout,
 }
@@ -40,11 +44,6 @@ export default class App extends NextApp {
                   line-height: 1.625;
                   margin: 0;
                   -webkit-tap-highlight-color: transparent;
-                }
-
-                p {
-                  margin-bottom: 1.5rem;
-                  margin-top: 0;
                 }
 
                 a {
