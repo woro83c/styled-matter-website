@@ -8,7 +8,7 @@ function CodeBlock({ children, className }) {
   const language = className.replace('language-', '')
 
   return (
-    <Highlight {...defaultProps} code={children} language={language} theme={theme}>
+    <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Pre
           className={className}
