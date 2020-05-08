@@ -4,15 +4,15 @@ import { cache } from 'emotion'
 import { ThemeProvider } from 'emotion-theming'
 import NextApp from 'next/app'
 import Head from 'next/head'
-import { CodeBlock, Layout } from '../components'
+import { CodeBlock, Layout, Link } from '../components'
 import theme from '../lib/theme'
 import UI from '../lib/ui'
 import '../styles/normalize.css'
 
-const { A, Code, Figure, Global, H1, H2, P } = UI
+const { Code, Figure, Global, H1, H2, P } = UI
 
 const components = {
-  a: A,
+  a: Link,
   code: CodeBlock,
   h1: H1,
   h2: H2,

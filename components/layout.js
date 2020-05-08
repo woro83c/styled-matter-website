@@ -1,10 +1,9 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import menu from '../lib/menu'
 import UI from '../lib/ui'
-import Logo from './logo'
+import { Link, Logo } from '.'
 
-const { A, Div, H1, Header, LI, Main, UL } = UI
+const { Div, H1, Header, LI, Main, UL } = UI
 
 function Layout({ children }) {
   const { pathname } = useRouter()
@@ -33,8 +32,8 @@ function Layout({ children }) {
             <UL fontSize={1} fontWeight={500} listUnstyled trim>
               {menu.map(({ children, href }, index) => (
                 <LI key={index} mb={4}>
-                  <Link href={href} passHref>
-                    <A color={href === pathname ? 'primary' : 'black'}>{children}</A>
+                  <Link color={href === pathname ? 'primary' : 'black'} href={href}>
+                    {children}
                   </Link>
                 </LI>
               ))}

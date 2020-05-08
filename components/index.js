@@ -1,4 +1,5 @@
 export { default as Callout } from './callout'
 export { default as CodeBlock } from './code-block'
 export { default as Layout } from './layout'
+export { default as Link } from './link'
 export { default as Logo } from './logo'
