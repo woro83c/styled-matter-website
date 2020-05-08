@@ -1,4 +1,4 @@
-import { CacheProvider, css, Global } from '@emotion/core'
+import { CacheProvider } from '@emotion/core'
 import { MDXProvider } from '@mdx-js/react'
 import { cache } from 'emotion'
 import { ThemeProvider } from 'emotion-theming'
@@ -8,7 +8,7 @@ import theme from '../lib/theme'
 import UI from '../lib/ui'
 import '../styles/normalize.css'
 
-const { A, Code, Figure, H1, H2, P } = UI
+const { A, Code, Figure, Global, H1, H2, P } = UI
 
 const components = {
   a: A,
@@ -30,32 +30,19 @@ export default class App extends NextApp {
         <MDXProvider components={components}>
           <ThemeProvider theme={theme}>
             <Global
-              styles={css`
-                *,
-                *::before,
-                *::after {
-                  box-sizing: border-box;
-                }
-
-                body {
-                  background-color: white;
-                  font-family: ${theme.fonts.sans};
-                  -webkit-font-smoothing: antialiased;
-                  -moz-osx-font-smoothing: grayscale;
-                  line-height: 1.625;
-                  margin: 0;
-                  -webkit-tap-highlight-color: transparent;
-                }
-
-                a {
-                  color: ${theme.colors.primary};
-                  text-decoration: none;
-
-                  &:hover {
-                    text-decoration: underline;
-                  }
-                }
-              `}
+              xcss={{
+                '*, *::before, *::after': {
+                  boxSizing: 'border-box',
+                },
+                body: {
+                  WebkitTapHighlightColor: 'transparent',
+                  bg: 'white',
+                  fontFamily: 'sans',
+                  fontSmoothing: 'antialiased',
+                  leading: 1.625,
+                  m: 0,
+                },
+              }}
             />
             <Component {...pageProps} />
           </ThemeProvider>
