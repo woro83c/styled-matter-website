@@ -3,6 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { cache } from 'emotion'
 import { ThemeProvider } from 'emotion-theming'
 import NextApp from 'next/app'
+import Head from 'next/head'
 import { CodeBlock, Layout } from '../components'
 import theme from '../lib/theme'
 import UI from '../lib/ui'
@@ -29,6 +30,12 @@ export default class App extends NextApp {
       <CacheProvider value={cache}>
         <MDXProvider components={components}>
           <ThemeProvider theme={theme}>
+            <Head>
+              <link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto+Mono&display=swap"
+                rel="stylesheet"
+              />
+            </Head>
             <Global
               xcss={{
                 '*, *::before, *::after': {
