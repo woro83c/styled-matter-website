@@ -1,6 +1,8 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/ultramin'
-import { Pre } from '../primitives'
+import UI from '../lib/ui'
+
+const { Pre } = UI
 
 function CodeBlock({ children, className }) {
   const language = className.replace('language-', '')

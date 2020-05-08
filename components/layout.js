@@ -2,10 +2,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import menu from '../lib/menu'
 import UI from '../lib/ui'
-import { H1, UL } from '../primitives'
 import Logo from './logo'
 
-const { A, Div, Header, LI, Main } = UI
+const { A, Div, H1, Header, LI, Main, UL } = UI
 
 function Layout({ children }) {
   const { pathname } = useRouter()
