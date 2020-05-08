@@ -24,7 +24,7 @@ function Layout({ children }) {
             <H1
               as="a"
               alignItems="center"
-              display="flex"
+              display="inline-flex"
               xcss={{ '&::after': { content: '\\00a0', visibility: 'hidden' } }}
             >
               <Logo />
