@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import menu from '../lib/menu'
 import UI from '../lib/ui'
@@ -19,14 +20,16 @@ function Layout({ children }) {
     >
       <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
         <Div position="fixed" pr={8} width={200} trim>
-          <H1
-            as="div"
-            alignItems="center"
-            display="flex"
-            xcss={{ '&::after': { content: '\\00a0' } }}
-          >
-            <Logo />
-          </H1>
+          <NextLink href="/" passHref>
+            <H1
+              as="a"
+              alignItems="center"
+              display="flex"
+              xcss={{ '&::after': { content: '\\00a0', visibility: 'hidden' } }}
+            >
+              <Logo />
+            </H1>
+          </NextLink>
 
           {!!menu.length && (
             <UL fontSize={1} fontWeight={500} listUnstyled trim>
