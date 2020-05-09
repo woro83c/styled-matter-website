@@ -21,6 +21,7 @@
     "styled-matter": "^0.3.4-alpha.6"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
