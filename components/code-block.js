@@ -1,5 +1,6 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/ultramin'
+import { Fragment } from 'react'
 import UI from '../lib/ui'
 
 const { Pre, Span } = UI
@@ -11,20 +12,28 @@ function CodeBlock({ children, className }) {
     <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
       {({ className, tokens, getLineProps, getTokenProps }) => (
         <Pre bg="gray.30" className={className}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <Span
-                  key={key}
-                  xcss={{
-                    '&.deleted-sign': { color: 'gray.300' },
-                    '&.inserted-sign': { bg: 'green.30', color: 'green.700' },
-                  }}
-                  {...getTokenProps({ token, key })}
-                />
-              ))}
-            </div>
-          ))}
+          {tokens.map((line, i) => {
+            const text = line.reduce((prev, { content }) => prev + content, '')
+
+            if (!text) {
+              return <Fragment key={i}> </Fragment>
+            }
+
+            return (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <Span
+                    key={key}
+                    xcss={{
+                      '&.deleted-sign': { color: 'gray.300' },
+                      '&.inserted-sign': { bg: 'green.30', color: 'green.700' },
+                    }}
+                    {...getTokenProps({ token, key })}
+                  />
+                ))}
+              </div>
+            )
+          })}
         </Pre>
       )}
     </Highlight>
