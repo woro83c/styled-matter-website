@@ -1,6 +1,6 @@
 import UI from '../lib/ui'
 
-const { Path, SVG } = UI
+const { SVG, Path } = UI
 
 function Logo() {
   return (
