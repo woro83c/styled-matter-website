@@ -18,12 +18,22 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["import", "react"],
+  "plugins": ["import", "react", "sort-destructure-keys"],
   "rules": {
     "import/order": ["error", { "alphabetize": { "order": "asc" } }],
     "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
     "prefer-destructuring": "error",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "noSortAlphabetically": true,
+        "reservedFirst": true,
+        "shorthandLast": true
+      }
+    ],
     "react/prop-types": "off",
+    "sort-destructure-keys/sort-destructure-keys": ["error", { "caseSensitive": true }],
     "sort-imports": ["error", { "ignoreDeclarationSort": true }]
   }
 }
