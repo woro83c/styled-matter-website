@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import menu from '../lib/menu'
@@ -6,7 +7,7 @@ import { Link, Logo } from '.'
 
 const { Div, H1, Header, LI, Main, UL } = UI
 
-function Layout({ children }) {
+function Layout({ children, meta: { title } = {} }) {
   const { pathname } = useRouter()
 
   return (
@@ -18,6 +19,12 @@ function Layout({ children }) {
       mx="auto"
       px={8}
     >
+      {title && (
+        <Head>
+          <title>{title} - Styled Matter</title>
+        </Head>
+      )}
+
       <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
         <Div position="fixed" pr={8} width={200} trim>
           <NextLink href="/" passHref>
