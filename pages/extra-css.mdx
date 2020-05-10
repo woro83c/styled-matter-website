@@ -31,7 +31,7 @@ Use the `xcss` prop to style what you can't using standard style props alone. It
   bg="white"
   xcss={{
     '&:hover': {
-      bg: 'primary',
+      bg: 'primary'
     },
     '&:hover *': {
       color: 'white'
@@ -41,4 +41,27 @@ Use the `xcss` prop to style what you can't using standard style props alone. It
   <H5 color="dark">Card title</H5>
   <A href="#" color="dark">Card link</A>
 </Div>
+```
+
+## Global styles
+
+Extract the `Global` component to insert global CSS:
+
+```jsx
+const { Global } = UI
+
+render(
+  <Global
+    xcss={{
+      '*, *::before, *::after': {
+        boxSizing: 'border-box'
+      },
+      body: {
+        bg: 'black',
+        color: 'white',
+        m: 0
+      }
+    }}
+  />
+)
 ```
