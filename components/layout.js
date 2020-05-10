@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import menu from '../lib/menu'
 import UI from '../lib/ui'
-import { Link, Logo } from '.'
+import { Link, Logomark } from '.'
 
 const { Div, H1, Header, LI, Main, UL } = UI
 
@@ -34,7 +34,7 @@ function Layout({ children, meta: { title } = {} }) {
               display="inline-flex"
               xcss={{ '&::after': { content: '\\00a0', visibility: 'hidden' } }}
             >
-              <Logo />
+              <Logomark />
             </H1>
           </NextLink>
 
