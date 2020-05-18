@@ -34,7 +34,7 @@ function Layout({ children, meta: { title } = {} }) {
               display="inline-flex"
               xcss={{ '&::after': { content: '\\00a0', visibility: 'hidden' } }}
             >
-              <Logomark height="auto" width={63} />
+              <Logomark height="100%" width={63} />
             </H1>
           </NextLink>
 
