@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { Callout, CodeBlock, Layout, Link } from '../components'
 import theme from '../lib/theme'
 import UI from '../lib/ui'
+import withAnchor from '../lib/with-anchor'
 import '../styles/normalize.css'
 
 const { Code, Figure, Global, H1, H2, P } = UI
@@ -16,7 +17,7 @@ const components = {
   a: Link,
   code: CodeBlock,
   h1: H1,
-  h2: H2,
+  h2: withAnchor(H2),
   inlineCode: Code,
   p: P,
   pre: Figure,
