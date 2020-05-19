@@ -28,6 +28,8 @@ export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
 
+    console.log('cache', cache)
+
     return (
       <CacheProvider value={cache}>
         <MDXProvider components={components}>
