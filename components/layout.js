@@ -5,7 +5,7 @@ import menu from '../lib/menu'
 import UI from '../lib/ui'
 import { Link, Logomark } from '.'
 
-const { After, Div, H1, Header, LI, Main, UL } = UI
+const { Div, H1, Header, LI, Main, UL } = UI
 
 function Layout({ children, meta: { title } = {} }) {
   const { pathname } = useRouter()
@@ -28,9 +28,13 @@ function Layout({ children, meta: { title } = {} }) {
       <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
         <Div position="fixed" pr={8} width={200} trim>
           <NextLink href="/" passHref>
-            <H1 as="a" alignItems="center" display="inline-flex">
+            <H1
+              as="a"
+              alignItems="center"
+              display="inline-flex"
+              xcss={{ '&::after': { content: '\\00a0', visibility: 'hidden' } }}
+            >
               <Logomark height="100%" width={63} />
-              <After visibility="hidden">\00a0</After>
             </H1>
           </NextLink>
 
