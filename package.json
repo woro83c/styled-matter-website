@@ -19,7 +19,7 @@
     "prism-react-renderer": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-matter": "^0.3.4"
+    "styled-matter": "^0.3.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
