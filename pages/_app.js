@@ -33,7 +33,7 @@ export default class App extends NextApp {
         <MDXProvider components={components}>
           <ThemeProvider theme={theme}>
             <Head>
-              <title>Styled Matter - One bit of UI to style them all</title>
+              <title>Styled Matter - One thing to style them all</title>
 
               {/* Favicons */}
               <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
