@@ -25,7 +25,7 @@ function Layout({ children, meta: { title } = {} }) {
         </Head>
       )}
 
-      <Header borderRight="1px solid" borderRightColor="gray.100" py={12}>
+      <Header borderRight="1px solid gray.100" py={12}>
         <Div position="fixed" pr={8} width={200} trim>
           <NextLink href="/" passHref>
             <H1 as="a" alignItems="center" display="inline-flex">
