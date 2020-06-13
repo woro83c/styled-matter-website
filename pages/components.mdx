@@ -33,3 +33,16 @@ Use the `as` prop to update the underlying element to be rendered:
   Get started
 </Button>
 ```
+
+## Pseudo-elements
+
+```jsx
+const { Before, After } = UI
+
+render(
+  <Button>
+    <Before mr=".2em">🚀</Before>
+    Get started
+  </Button>
+)
+```
