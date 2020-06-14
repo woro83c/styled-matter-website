@@ -96,17 +96,17 @@ If an element _is_ supplied though, this will trump any props that have been sup
 
 ## Responsive embeds
 
-Sometimes markup needs to be completely different based on viewport width, e.g., imagine a case where we want to show tabs on mobile versus a table on desktop. Using responsive embeds we can render elements _only_ at certain breakpoints - we do this by using breakpoint _indices_ as selectors:
+Sometimes markup needs to be completely different based on viewport width, e.g., imagine we want to show tabs on mobile versus a table on desktop. Using responsive embeds we can render elements _only_ at certain breakpoints. We do this by using breakpoint _indices_ as selectors:
 
 ```jsx
 // Indices: 0, 1, 2, 3
-const breakpoints = [0, '48rem', '64rem', '80rem']
+const breakpoints = [0, '48em', '64em', '80em']
 
 render(
   <DefaultComponent
-    $1={<Div>Showing a div at 48rem</Div>}
-    $2={<Span>Showing a span at 64rem</Span>}
-    $3={<PricingTable $before="Showing the pricing table at 80rem" />}
+    $1={<Div>Showing a div at 48em</Div>}
+    $2={<Span>Showing a span at 64em</Span>}
+    $3={<PricingTable $before="Showing the pricing table at 80em" />}
   />
 )
 ```
